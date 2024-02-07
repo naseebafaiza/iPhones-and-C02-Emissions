@@ -34,5 +34,17 @@ print("\nTop 5 Important Models: ")
 # For example this means one increase in iPhone 12 (holding all other features CONSTANT) = 8.055720 increase in CO2 emissions.
 print(top_5_features)
 
+# Now, I want to evaluate the performance of the linear regression model and the significance of features without the 'NAME' column.
+# I want to understand how much the 'NAME' column, which represents different iPhone models and is encoded using one-hot encoding, contributes
+# to the prediction of CO2 emissions as opposed to other numerical features.
 
+X_without_NAME = data.drop(['NAME', 'CO2E'], axis=1)
+cv_scores_without_NAME = cross_val_score(model, X_without_NAME, y, cv=k_f, scoring='neg_mean_squared_error')
+rmse_scores_without_NAME = np.sqrt(-cv_scores_without_NAME)
+model.fit(X_without_NAME, y)
+feature_importance_without_NAME = pd.Series(model.coef_, index=X_without_NAME.columns)
+top_5_features_without_NAME = feature_importance_without_NAME.abs().nlargest(5)
 
+print("\nAverage RMSE across all cross-validation folds: ",rmse_scores_without_NAME.mean())
+print("\nTop 5 Important Features: ")
+print(top_5_features_without_NAME)
