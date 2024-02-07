@@ -1,6 +1,6 @@
 ### iPhone CO2 Emissions Prediction
 
-## Multiple Linear Regression Overview
+## Multiple Linear Regression Overview (iPhone_linReg.py)
 
 This project focuses on predicting the CO2 emissions of various iPhone models using a machine learning approach. We employ a Linear Regression model to assess how different features influence CO2 emissions. The dataset iPhone.csv is utilized for this purpose, comprising various iPhone models and their respective specifications.
 
@@ -31,7 +31,7 @@ FRONT CAMERA (mp): Increasing the megapixel count of the front camera by one meg
 MAIN CAMERA (mp): Each additional megapixel in the main camera increases CO2 emissions by about 1.35 units.
 
 
-## Simple Linear Regression Overview
+## Simple Linear Regression Overview (iPhone_simple_linReg.py)
 
 This part of the project aims to quantify the impact of each iPhone features on their CO2 emissions. By employing a Linear Regression model, we isolate the effect of individual features such as display size, storage capacity, and camera specifications on CO2 emissions. The analysis is also based on data from the iPhone.csv file.
 
