@@ -18,7 +18,7 @@ The average RMSE across all cross-validation folds is approximately 3.45. The to
 
 Removing the NAME column and only using numerical features resulted in an average RMSE of approximately 4.07. The top 5 important features based on their significance are Display Size, GPU Cores, Memory, Front Camera Megapixels, and Main Camera Megapixels.
 
-## Impact of Numerical Features on CO2E
+## Impact of Removal of NAME and use of Numerical Features on CO2E
 
 DISPLAY (inch): Each additional inch in display size increases CO2 emissions by approximately 19.34 units. This indicates that larger displays are associated with higher CO2 emissions.
 
